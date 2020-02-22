@@ -42,32 +42,33 @@ In this part of the lab we will deploy an application called webapp with image n
 
 1. Create the `webapp` application with image nginx
 
-        ```kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml```
+        kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
 
-2.Change the replicas to 5 in the yaml and create it:
+2. Change the replicas to 5 in the yaml and create it:
 
-```kubectl create -f webapp.yaml```
+       kubectl create -f webapp.yaml
 
-3.Get the deployment you just created with labels:
+3. Get the deployment you just created with labels:
 
-```kubectl get deploy webapp --show-labels```
+       kubectl get deploy webapp --show-labels
 
-4.Output the yaml file of the deployment you just created:
+4. Output the yaml file of the deployment you just created:
 
-```kubectl get deploy webapp -o yaml```
+       kubectl get deploy webapp -o yaml
 
-5.Get the pods of this deployment:
+5. Get the pods of this deployment:
 
-* Get the label of the deployment:
+  1. Get the label of the deployment:
 
- ```kubectl get deploy --show-labels```
+              kubectl get deploy --show-labels
 
-* Get the pods with that label:
+  2. Get the pods with that label:
 
- ```kubectl get pods -l app=webapp```
+          kubectl get pods -l app=webapp
 
-**Congratulations! You have successfully deployed an application on Kubernetes**
 
-**Task:**
+### **Congratulations! You have successfully deployed an application on Kubernetes**
 
-Scale the deployment from 5 replicas to 20 replicas and verify it.
+### **Task:**
+
+**Scale the deployment from 5 replicas to 20 replicas and verify it.**
