@@ -40,7 +40,7 @@ Run the ```ibmcloud ks clusters``` command to verify the terminal and setup for 
 
 In this part of the lab we will deploy an application called webapp with image nginx with 5 replicas.
 
-1.Create the ```webapp``` application with image nginx
+1.Create the `webapp` application with image nginx
 
 ```kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml```
 
