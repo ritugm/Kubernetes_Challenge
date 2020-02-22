@@ -58,11 +58,11 @@ In this part of the lab we will deploy an application called webapp with image n
 
 5. Get the pods of this deployment:
 
-  1. Get the label of the deployment:
+  * Get the label of the deployment:
 
           kubectl get deploy --show-labels
 
-  2. Get the pods with that label:
+  * Get the pods with that label:
 
           kubectl get pods -l app=webapp
 
