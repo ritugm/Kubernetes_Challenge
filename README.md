@@ -60,7 +60,7 @@ In this part of the lab we will deploy an application called webapp with image n
 
   1. Get the label of the deployment:
 
-              kubectl get deploy --show-labels
+          kubectl get deploy --show-labels
 
   2. Get the pods with that label:
 
@@ -69,6 +69,6 @@ In this part of the lab we will deploy an application called webapp with image n
 
 ### **Congratulations! You have successfully deployed an application on Kubernetes**
 
-### **Task:**
+## **Task:**
 
 **Scale the deployment from 5 replicas to 20 replicas and verify it.**
