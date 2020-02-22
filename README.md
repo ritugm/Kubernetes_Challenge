@@ -1,6 +1,12 @@
 # Kubernetes_Challenge
 
-# Set up the web terminal
+## Pre-requisites:
+
+Create an [IBM Cloud](https://cloud.ibm.com) account.
+
+Create an [IBM Kubernetes Service cluster](https://cloud.ibm.com/kubernetes/clusters) in order to proceed.
+
+## Set up the web terminal
 
 Log in to the [IBM Cloud](https://cloud.ibm.com) to access the dashboard.
 
@@ -28,7 +34,7 @@ Run the ```ibmcloud ks clusters``` command to verify the terminal and setup for 
 
 ```ibmcloud ks clusters```
 
-![Confirm cluster access](images/terminal.png)
+![Confirm cluster access](images/terminal.png)e
 
 
 # Deploy an application on Kubernetes
