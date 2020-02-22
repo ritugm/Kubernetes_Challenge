@@ -1,5 +1,7 @@
 # Kubernetes_Challenge
 
+# Set up the web terminal
+
 Log in to the [IBM Cloud](https://cloud.ibm.com) to access the dashboard.
 
 Click on the top left navigation menu and select **Kubernetes**.
@@ -14,45 +16,48 @@ Click on the **Web terminal** button.
 
 ![Open Web Terminal](images/webterminal.png)
 
+Click on the **Install** button if prompted (this won't be shown if the terminal is already installed). Getting the terminal ready will take a couple of minutes. If you click on the **Web terminal** button before it's ready you will see:
+
+![Kubernetes terminal unavailable ](images/terminalunavailable.png)
+
+Open the web terminal - it will initially display at the bottom of the browser panel. Click on the expand button to open the terminal in a full browser tab:
+
+![Expand the web terminal](images/expand.png)
+
+Run the ```ibmcloud ks clusters``` command to verify the terminal and setup for access to the cluster
+
+```ibmcloud ks clusters```
+
+![Confirm cluster access](images/terminal.png)
 
 
+# Deploy an application on Kubernetes
 
-
-
-
-
-# 1. Deploy your application
 
 In this part of the lab we will deploy an application called webapp with image nginx with 5 replicas.
 
-## Heading 2
+1.Create the ```webapp``` application with image nginx
 
-*italics*
+```kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml```
 
-**List**
+2.Change the replicas to 5 in the yaml and create it:
 
-* something
-* something  more
+```kubectl create -f webapp.yaml```
 
-**URLs**
+3.Get the deployment you just created with labels:
 
-[Text over an URL](https://www.ibm.com)
+```kubectl get deploy webapp --show-labels```
 
+4.Output the yaml file of the deployment you just created:
 
+```kubectl get deploy webapp -o yaml```
 
-**Images**
+5.Get the pods of this deployment:
 
-![Alt text goes here](images/dev.png)
+* Get the label of the deployment:
 
+ ```kubectl get deploy --show-labels```
 
-**Display tiles inside a series or tiles inside a tile**
+* Get the pods with that label:
 
-To have include content(articles, blogs, series) within one tile or to create tiles within tiles,
-
-![Tile in tile](images/tile.png)
-
-* Create a series and use the following snippet as a template
-* Host your child tiles in another private portal and host the main tile on your desired private portal
-
-
-![image](images/Picture1.png)
+ ```kubectl get pods -l app=webapp```
