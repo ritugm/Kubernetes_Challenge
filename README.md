@@ -32,9 +32,7 @@ Open the web terminal - it will initially display at the bottom of the browser p
 
 Run the ```ibmcloud ks clusters``` command to verify the terminal and setup for access to the cluster
 
-```ibmcloud ks clusters```
-
-![Confirm cluster access](images/terminal.png)e
+![Confirm cluster access](images/terminal.png)
 
 
 # Deploy an application on Kubernetes
@@ -67,3 +65,9 @@ In this part of the lab we will deploy an application called webapp with image n
 * Get the pods with that label:
 
  ```kubectl get pods -l app=webapp```
+
+**Congratulations! You have successfully deployed an application on Kubernetes**
+
+**Task:**
+
+Scale the deployment from 5 replicas to 20 replicas and verify it.
